@@ -5,12 +5,12 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class UserInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{UserConfiguration.class};
+        return new Class[]{ApplicationContextConfig.class};
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return null;
+       return new Class[]{ UserConfiguration.class};
     }
 
     @Override

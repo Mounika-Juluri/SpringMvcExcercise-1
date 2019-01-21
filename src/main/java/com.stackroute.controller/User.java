@@ -1,13 +1,45 @@
 package com.stackroute.controller;
 
-public class User {
-    private String name;
+import javax.persistence.*;
 
-    public String getName() {
-        return name;
+@Entity
+public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    @Column
+    private String username;
+
+    @Column
+    private String passwaord;
+/*
+
+    public User(String username, String passwaord) {
+        this.username = username;
+        this.passwaord = passwaord;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public User() {
+    }
+*/
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPasswaord() {
+        return passwaord;
+    }
+
+    public void setPasswaord(String passwaord) {
+        this.passwaord = passwaord;
     }
 }
+
+
